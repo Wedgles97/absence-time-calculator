@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Calculadora de Período de Ausência</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="title">Calculadora</h1>
+      <p>Período de Ausência</p>
+      <input type="date" id="initialDate" placeholder="Data Inicial" />
+      <input
+        type="number"
+        id="quantMonths"
+        placeholder="Quantidade de Meses"
+        min="1"
+        max="6"
+      />
+      <button onclick="calcAbsencePeriod()">Calcular</button>
+    </div>
+
+    <div class="results" id="resultados">
+      <h2 class="title">Resultado</h2>
+      <div class="result-item">
+        <span class="result-label">Dias:</span>
+        <span class="result-value" id="resultDays"></span>
+      </div>
+      <div class="result-item">
+        <span class="result-label">Semanas:</span>
+        <span class="result-value" id="resultWeeks"></span>
+      </div>
+      <div class="result-item">
+        <span class="result-label">Meses:</span>
+        <span class="result-value" id="resultMonths"></span>
+      </div>
+      <div class="result-item">
+        <span class="result-label">Anos:</span>
+        <span class="result-value" id="resultYears"></span>
+      </div>
+      <div class="result-item">
+        <span class="result-label">Data de retorno:</span>
+        <span class="result-value" id="finaleDate"></span>
+      </div>
+      <div class="result-item">
+        <span class="result-label">Dia da semana do retorno:</span>
+        <span class="result-value" id="daysWeek"></span>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
