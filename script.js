@@ -14,8 +14,14 @@ function calcAbsencePeriod() {
     return;
   }
 
+  const dayOriginal = initialDate.getDate(); // salva o dia original
   const finaleDate = new Date(initialDate);
   finaleDate.setMonth(finaleDate.getMonth() + quantMonths);
+  
+  // Se o JS ajustar a data automaticamente (ex: 31 → 02/03), a gente corrige:
+  if (finaleDate.getDate() !== dayOriginal) {
+    finaleDate.setDate(0); // vai para o último dia do mês anterior
+  }
 
   const differenceDays = Math.ceil(
     (finaleDate - initialDate) / (1000 * 60 * 60 * 24)
